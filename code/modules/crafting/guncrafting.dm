@@ -4,19 +4,19 @@
 // PARTS //
 
 /obj/item/weaponcrafting/receiver
-	name = "Модульный приемник"
+	name = "modular receiver"
 	desc = "Прототип модульной ствольной коробки и спускового механизма для огнестрельного оружия."
 	icon = 'icons/obj/improvised.dmi'
 	icon_state = "receiver"
 
 /obj/item/weaponcrafting/stock
-	name = "Приклад винтовки"
+	name = "rifle stock"
 	desc = "Классический приклад винтовки, который одновременно служит рукояткой, грубо вырезан из дерева."
 	icon = 'icons/obj/improvised.dmi'
 	icon_state = "riflestock"
 
 /obj/item/weaponcrafting/revolverbarrel
-	name = "Импровизированный револьверный ствол"
+	name = "improvised revolver barrel"
 	desc = "Грубо сделанный револьверный ствол."
 	icon = 'icons/obj/improvised.dmi'
 	icon_state = "rev_barrel"
@@ -24,7 +24,7 @@
 	var/new_fire_sound = 'sound/weapons/gunshots/1rev257.ogg'
 
 /obj/item/weaponcrafting/revolverbarrel/steel
-	name = "Стальной револьверный ствол"
+	name = "steel revolver barrel"
 	desc = "Ствол пистолета из высококачественной тяжелой стали для повышения устойчивости."
 	icon = 'icons/obj/improvised.dmi'
 	icon_state = "s_rev_barrel"
