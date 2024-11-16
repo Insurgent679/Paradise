@@ -4,15 +4,15 @@ menu "menu"
 	elem
 		name = "&File"
 	elem
-		name = "&Quick screenshot"
+		name = "&Быстрый снимок экрана"
 		command = ".screenshot auto"
 		category = "&File"
 	elem
-		name = "&Save screenshot as..."
+		name = "&Сохраните скриншот как..."
 		command = ".screenshot"
 		category = "&File"
 	elem "reconnectbutton"
-		name = "&Reconnect"
+		name = "&Повторно подключиться"
 		command = ".reconnect"
 		category = "&File"
 	elem "debugmcbutton"
@@ -21,17 +21,17 @@ menu "menu"
 		category = "&File"
 		is-disabled = true
 	elem
-		name = "&Quit"
+		name = "&Выйти"
 		command = ".quit"
 		category = "&File"
 	elem
 		name = "&Icons"
 	elem
-		name = "&Size"
+		name = "&Размер"
 		category = "&Icons"
 		saved-params = "is-checked"
 	elem "stretch"
-		name = "&Stretch to fit"
+		name = "&Растянуть по размеру"
 		command = ".winset \"mapwindow.map.icon-size=0\""
 		category = "&Size"
 		is-checked = true
@@ -80,7 +80,7 @@ menu "menu"
 		can-check = true
 		group = "size"
 	elem
-		name = "&Scaling"
+		name = "&Изменение масштаба"
 		category = "&Icons"
 		saved-params = "is-checked;command"
 	elem "NN"
@@ -108,40 +108,40 @@ menu "menu"
 		category = "&Icons"
 		can-check = true
 	elem
-		name = "&Options"
+		name = "&Настройки"
 	elem
-		name = "&Open Volume Mixer"
+		name = "&Настройки звука"
 		command = "Open-Volume-Mixer"
-		category = "&Options"
+		category = "&Настройки"
 	elem "statusbar"
 		name = "&Show status bar"
-		category = "&Options"
+		category = "&Настройки"
 		can-check = true
 		is-checked = true
 		saved-params = "is-checked"
 		command = ".winset \"menu.statusbar.is-checked=true?mapwindow.status_bar.is-visible=true:mapwindow.status_bar.is-visible=false\""
 	elem
-		name = "&Game Preferences"
+		name = "&Настройки игры"
 		command = "Game-Preferences"
-		category = "&Options"
+		category = "&Настройки"
 	elem
-		name = "&Help"
+		name = "&Помощь"
 	elem
-		name = "&Admin help"
+		name = "&Помощь от администратора"
 		command = "adminhelp"
-		category = "&Help"
+		category = "&Помощь"
 	elem
 		name = "&Fit Viewport"
 		command = "Fit-Viewport"
-		category = "&Help"
+		category = "&Помощь"
 	elem
-		name = "&Refresh TGUI"
+		name = "&Обновить TGUI"
 		command = "Refresh-TGUI"
-		category = "&Help"
+		category = "&Помощь"
 	elem
-		name = "&Fix Chat"
+		name = "&Исправить чат"
 		command = "Fix-Chat"
-		category = "&Help"
+		category = "&Помощь"
 
 
 window "mainwindow"
@@ -328,7 +328,7 @@ window "rpane"
 		size = 40x16
 		is-checked = true
 		saved-params = "is-checked"
-		text = "Info"
+		text = "Информация"
 		command = ".winset \"rpanewindow.top=infowindow\""
 		group = "rpanemode"
 		button-type = pushbox
@@ -342,7 +342,7 @@ window "rpane"
 		type = BUTTON
 		pos = 211,7
 		size = 50x16
-		text = "Rules"
+		text = "Правила"
 		command = "rules"
 	elem "githubb"
 		type = BUTTON
@@ -354,7 +354,7 @@ window "rpane"
 		type = BUTTON
 		pos = 313,7
 		size = 50x16
-		text = "Map"
+		text = "Карта"
 		command = "webmap"
 	elem "changelog"
 		type = BUTTON
