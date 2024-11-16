@@ -149,26 +149,26 @@
 	var/list/contents = get_surroundings(user)
 	var/send_feedback = 1
 	if(!check_contents(R, contents))
-		return ", missing component."
+		return ", недостающий компонент."
 	if(!check_tools(user, R, contents))
-		return ", missing tool."
+		return ", недостающий компонент."
 	if(!check_pathtools(user, R, contents))
-		return ", missing tool."
+		return ", недостающий компонент."
 
 	if(!do_after(user, R.time, user))
 		return "."
 	contents = get_surroundings(user)
 
 	if(!check_contents(R, contents))
-		return ", missing component."
+		return ", недостающий компонент."
 	if(!check_tools(user, R, contents))
-		return ", missing tool."
+		return ", недостающий компонент."
 	if(!check_pathtools(user, R, contents))
-		return ", missing tool."
+		return ", недостающий компонент."
 
 	var/list/parts = requirements_deletion(R, user)
 	if(!parts)
-		return ", missing component."
+		return ", недостающий компонент."
 
 	var/result_list = R.result
 	if(!islist(result_list))
@@ -220,7 +220,7 @@
 					break
 
 			if(needed_amount > 0)
-				stack_trace("While crafting [recipe], some of [thing] went missing (still need [needed_amount])!")
+				stack_trace("Во время крафта [recipe], некоторые из [thing] пропали без вести (Нужно ещё [needed_amount])!")
 				continue // ignore the error, and continue crafting for player's benefit
 
 		else if(ispath(thing, /obj/item/stack))
@@ -242,14 +242,14 @@
 					break
 
 			if(needed_amount > 0)
-				stack_trace("While crafting [recipe], some of [thing] went missing (still need [needed_amount])!")
+				stack_trace("Во время крафта [recipe], некоторые из [thing] пропали без вести (Нужно ещё [needed_amount])!")
 				continue
 
 		else
 			for(var/i in 1 to needed_amount)
 				var/atom/movable/part_atom = locate(thing) in (surroundings - parts_used)
 				if(!part_atom)
-					stack_trace("While crafting [recipe], the [thing] went missing!")
+					stack_trace("Во время крафта [recipe], [thing] пропали без вести!")
 					continue
 				parts_used += part_atom
 
@@ -275,7 +275,7 @@
 		for(var/i in 1 to recipe.parts[part_path])
 			var/part = locate(part_path) in parts_used
 			if(!part)
-				stack_trace("Part [part_path] went missing")
+				stack_trace("части [part_path] пропали без вести")
 			parts_returned += part
 			parts_used -= part
 	QDEL_LIST(parts_used)
@@ -288,11 +288,11 @@
 /datum/personal_crafting/ui_interact(mob/user, datum/tgui/ui = null)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		ui = new(user, src, "PersonalCrafting", "Crafting Menu")
+		ui = new(user, src, "Персональный крафт", "Меню для крафта")
 		ui.open()
 
 /datum/personal_crafting/proc/close(mob/user)
-	var/datum/tgui/ui = SStgui.get_open_ui(user, src, "main")
+	var/datum/tgui/ui = SStgui.get_open_ui(user, src, "Главное")
 	if(ui)
 		ui.close()
 
@@ -344,8 +344,8 @@
 	. = TRUE
 
 	switch(action)
-		if("make")
-			var/datum/crafting_recipe/TR = locate(params["make"]) in GLOB.crafting_recipes
+		if("Создать")
+			var/datum/crafting_recipe/TR = locate(params["Создать"]) in GLOB.crafting_recipes
 			if(!istype(TR))
 				return
 			busy = TRUE
@@ -356,7 +356,7 @@
 				if(TR.alert_admins_on_craft)
 					message_admins("[key_name_admin(usr)] has created a [TR.name] at [ADMIN_COORDJMP(usr)]")
 			else
-				to_chat(usr, "<span class='warning'>Construction failed[fail_msg]</span>")
+				to_chat(usr, "<span class='warning'>Строительство провалилось[fail_msg]</span>")
 			busy = FALSE
 			SStgui.update_uis(src)
 
