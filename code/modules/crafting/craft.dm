@@ -220,7 +220,7 @@
 					break
 
 			if(needed_amount > 0)
-				stack_trace("Во время создания [recipe], некоторые из [thing] пропали без вести (Нужно ещё [needed_amount])!")
+				stack_trace("While crafting [recipe], some of [thing] went missing (still need [needed_amount])!")
 				continue // ignore the error, and continue crafting for player's benefit
 
 		else if(ispath(thing, /obj/item/stack))
@@ -242,14 +242,14 @@
 					break
 
 			if(needed_amount > 0)
-				stack_trace("Во время создания [recipe], некоторые из [thing] пропали без вести (Нужно ещё [needed_amount])!")
+				stack_trace("While crafting [recipe], some of [thing] went missing (still need [needed_amount])!")
 				continue
 
 		else
 			for(var/i in 1 to needed_amount)
 				var/atom/movable/part_atom = locate(thing) in (surroundings - parts_used)
 				if(!part_atom)
-					stack_trace("Во время создания [recipe], [thing] пропали без вести!")
+					stack_trace("While crafting [recipe], the [thing] went missing!")
 					continue
 				parts_used += part_atom
 
@@ -275,7 +275,7 @@
 		for(var/i in 1 to recipe.parts[part_path])
 			var/part = locate(part_path) in parts_used
 			if(!part)
-				stack_trace("Части [part_path] пропали без вести")
+				stack_trace("Part [part_path] went missing")
 			parts_returned += part
 			parts_used -= part
 	QDEL_LIST(parts_used)
