@@ -8,7 +8,7 @@ menu "menu"
 		command = ".screenshot auto"
 		category = "&File"
 	elem
-		name = "&Сохраните скриншот как..."
+		name = "&Сохраните снимок экрана как..."
 		command = ".screenshot"
 		category = "&File"
 	elem "reconnectbutton"
@@ -97,13 +97,13 @@ menu "menu"
 		can-check = true
 		group = "scale"
 	elem "BL"
-		name = "&Bilinear"
+		name = "&Билинейный"
 		command = ".winset \"mapwindow.map.zoom-mode=blur\""
 		category = "&Scaling"
 		can-check = true
 		group = "scale"
 	elem "textmode"
-		name = "&Text"
+		name = "&Текст"
 		command = ".winset \"menu.textmode.is-checked=true?mapwindow.map.text-mode=true:mapwindow.map.text-mode=false\""
 		category = "&Icons"
 		can-check = true
@@ -131,7 +131,7 @@ menu "menu"
 		command = "adminhelp"
 		category = "&Помощь"
 	elem
-		name = "&Fit Viewport"
+		name = "&Настроить обзор"
 		command = "Fit-Viewport"
 		category = "&Помощь"
 	elem
