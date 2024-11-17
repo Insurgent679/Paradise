@@ -4,8 +4,8 @@
 	set desc = "Введите то, о чем вы хотите знать. После этого в вашем веб-браузере откроется вики-страница."
 	set hidden = 1
 	if(CONFIG_GET(string/wikiurl))
-		var/query = tgui_input_text(src, "Введите запрос:", "Поиск по вики-сайту", "Домашняя страница")
-		if(query == "Домашняя страница")
+		var/query = tgui_input_text(src, "Введите запрос:", "Поиск по вики-сайту", "Заглавная страница")
+		if(query == "Заглавная страница")
 			src << link(CONFIG_GET(string/wikiurl))
 		else if(query)
 			var/output = CONFIG_GET(string/wikiurl) + "/index.php?title=Special%3ASearch&profile=default&search=" + query
