@@ -151,9 +151,9 @@
 	if(!check_contents(R, contents))
 		return ", недостающий компонент."
 	if(!check_tools(user, R, contents))
-		return ", недостающий компонент."
+		return ", недостающий инструмент."
 	if(!check_pathtools(user, R, contents))
-		return ", недостающий компонент."
+		return ", недостающий инструмент."
 
 	if(!do_after(user, R.time, user))
 		return "."
@@ -162,9 +162,9 @@
 	if(!check_contents(R, contents))
 		return ", недостающий компонент."
 	if(!check_tools(user, R, contents))
-		return ", недостающий компонент."
+		return ", недостающий инструмент."
 	if(!check_pathtools(user, R, contents))
-		return ", недостающий компонент."
+		return ", недостающий инструмент."
 
 	var/list/parts = requirements_deletion(R, user)
 	if(!parts)
