@@ -1,6 +1,14 @@
 /mob/living/simple_animal/ascendant_shadowling
 	name = "ascendant shadowling"
-	desc = "A large, floating eldritch horror. It has pulsing markings all about its body and large horns. It seems to be floating without any form of support."
+	ru_names = list(
+		NOMINATIVE = "восходящий тенелинг",
+		GENITIVE = "восходящего тенелинга",
+		DATIVE = "восходящему тенелингу",
+		ACCUSATIVE = "восходящий тенелинг",
+		INSTRUMENTAL = "восходящим тенелингом",
+		PREPOSITIONAL = "восходящем тенелинге"
+	)
+	desc = "Большой, парящий в воздухе жуткий монстр. У него пульсирующие отметины по всему телу и большие рога. Кажется, что он летит без какой-либо поддержки."
 	icon = 'icons/mob/mob.dmi'
 	icon_state = "shadowling_ascended"
 	icon_living = "shadowling_ascended"
@@ -17,9 +25,9 @@
 
 	universal_speak = 1
 
-	response_help   = "stares at"
-	response_disarm = "flails at"
-	response_harm   = "flails at"
+	response_help   = "пристально смотрит на"
+	response_disarm = "цепляется за"
+	response_harm   = "цепляется за"
 
 	harm_intent_damage = 0
 	melee_damage_lower = 60 //Was 35, buffed

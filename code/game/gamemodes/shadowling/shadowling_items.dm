@@ -1,6 +1,14 @@
 /obj/item/clothing/under/shadowling
 	name = "blackened flesh"
-	desc = "Black, chitinous skin with thin red veins."
+	ru_names = list(
+		NOMINATIVE = "почерневшая плоть",
+		GENITIVE = "почерневшей плоти",
+		DATIVE = "почерневшей плоти",
+		ACCUSATIVE = "почерневшая плоть",
+		INSTRUMENTAL = "почерневшей плотью",
+		PREPOSITIONAL = "почерневшей плоти"
+	)
+	desc = "Черная хитиновая кожа с тонкими красными прожилками."
 	icon = 'icons/obj/clothing/species/shadowling/shadowling_clothes.dmi'
 	icon_state = "shadowling_uniform"
 	origin_tech = null
@@ -20,7 +28,15 @@
 
 /obj/item/clothing/suit/space/shadowling
 	name = "chitin shell"
-	desc = "Dark, semi-transparent shell. Protects against vacuum, but not against the light of the stars." //Still takes damage from spacewalking but is immune to space itself
+	ru_names = list(
+		NOMINATIVE = "хитиновый панцирь",
+		GENITIVE = "хитинового панциря",
+		DATIVE = "хитиновому панцирю",
+		ACCUSATIVE = "хитиновый панцирь",
+		INSTRUMENTAL = "хитиновым панцирем",
+		PREPOSITIONAL = "хитиновом панцире"
+	)
+	desc = "Тёмная полупрозрачная оболочка. Защищает от вакуума, но не от света звёзд." //Still takes damage from spacewalking but is immune to space itself
 	icon = 'icons/obj/clothing/species/shadowling/shadowling_clothes.dmi'
 	icon_state = "shadowling_suit"
 	body_parts_covered = FULL_BODY //Shadowlings are immune to space
@@ -46,7 +62,15 @@
 
 /obj/item/clothing/shoes/shadowling
 	name = "chitin feet"
-	desc = "Charred-looking feet. They have minature hooks that latch onto flooring."
+	ru_names = list(
+		NOMINATIVE = "хитиновые лапы",
+		GENITIVE = "хитиновых лап",
+		DATIVE = "хитиновым лапам",
+		ACCUSATIVE = "хитиновые лапы",
+		INSTRUMENTAL = "хитиновыми лапами",
+		PREPOSITIONAL = "хитиновых лапах"
+	)
+	desc = "Лапы выглядят обугленными. У них есть маленькие крючки, которые цепляются за пол."
 	icon = 'icons/obj/clothing/species/shadowling/shadowling_clothes.dmi'
 	icon_state = "shadowling_shoes"
 	onmob_sheets = list(
@@ -65,7 +89,15 @@
 
 /obj/item/clothing/mask/gas/shadowling
 	name = "chitin mask"
-	desc = "A mask-like formation with slots for facial features. A red film covers the eyes."
+	ru_names = list(
+		NOMINATIVE = "хитиновая маска",
+		GENITIVE = "хитиновой маски",
+		DATIVE = "хитиновой маске",
+		ACCUSATIVE = "хитиновая маска",
+		INSTRUMENTAL = "хитиновыми масками",
+		PREPOSITIONAL = "хитиновых масках"
+	)
+	desc = "Похожее на маску образование с прорезями для черт лица. Красная пленка покрывает глаза."
 	icon = 'icons/obj/clothing/species/shadowling/shadowling_clothes.dmi'
 	icon_state = "shadowling_mask"
 	onmob_sheets = list(
@@ -85,7 +117,15 @@
 
 /obj/item/clothing/gloves/shadowling
 	name = "chitin hands"
-	desc = "An electricity-resistant covering of the hands."
+	ru_names = list(
+		NOMINATIVE = "хитиновые перчатки",
+		GENITIVE = "хитиновых перчатках",
+		DATIVE = "хитиновым перчатками",
+		ACCUSATIVE = "хитиновые перчатки",
+		INSTRUMENTAL = "хитиновыми перчатками",
+		PREPOSITIONAL = "хитиновых перчатках"
+	)
+	desc = "Электростойкое покрытие для рук."
 	icon = 'icons/obj/clothing/species/shadowling/shadowling_clothes.dmi'
 	icon_state = "shadowling_gloves"
 	onmob_sheets = list(
@@ -104,7 +144,15 @@
 
 /obj/item/clothing/head/shadowling
 	name = "chitin helm"
-	desc = "A helmet-like enclosure of the head."
+	ru_names = list(
+		NOMINATIVE = "хитиновый шлем",
+		GENITIVE = "хитинового шлема",
+		DATIVE = "хитиновым шлемам",
+		ACCUSATIVE = "хитиновый шлем",
+		INSTRUMENTAL = "хитиновыми шлемами",
+		PREPOSITIONAL = "хитиновых шлемах"
+	)
+	desc = "Шлемообразное ограждение головы."
 	icon = 'icons/obj/clothing/species/shadowling/shadowling_clothes.dmi'
 	icon_state = "shadowling_helmet"
 	onmob_sheets = list(
@@ -128,7 +176,15 @@
 
 /obj/item/clothing/glasses/shadowling
 	name = "crimson eyes"
-	desc = "A shadowling's eyes. Very light-sensitive and can detect body heat through walls."
+	ru_names = list(
+		NOMINATIVE = "багровые очки",
+		GENITIVE = "багровых очков",
+		DATIVE = "багровым очкам",
+		ACCUSATIVE = "багровые очки",
+		INSTRUMENTAL = "багровыми очками",
+		PREPOSITIONAL = "багровых очках"
+	)
+	desc = "Очки из глаз сумеречного существа. Очень чувствительны к свету и могут улавливать тепло тела сквозь стены."
 	icon = 'icons/obj/clothing/species/shadowling/shadowling_clothes.dmi'
 	icon_state = "shadowling_glasses"
 	onmob_sheets = list(
